@@ -4,12 +4,12 @@ Spatial transcriptomics. Human placentae from distinct regions including the cho
 	
 Single-cell and spatial transcriptomics analyses. Reads were demultiplexed and aligned to a custom human (GRCh38) and SARS-CoV-2 reference genome (NC_045512.2) using SpaceRanger (v1.3.0) and custom bash scripts. Downstream analyses were done using the package Seurat (v4.0.3) in rStudio (v4.1.1). Counts matrices were filtered iteratively to exclude low-quality transcriptomes and clusters defined by quality control metrics (e.g. mitochondrial or hemoglobin gene expression). Spatial transcriptomes were normalized and scaled using a negative binomial model (SCTransform) and the top 3,000 most variable transcripts were used for to principal component analysis dimension reduction. The first 30 PCA dimensions were used for K-nearest neighbors’ analysis, clustered using a Louvain algorithm with the default resolution parameter (0.6), and visualized by unique manifold approximation and projection (UMAP) in two dimensions. Significantly upregulated transcripts were manually examined and compared to the term placenta atlas in addition to using EnrichR(58), PlacentaCellEnrich(110), and the Human Protein Atlas(111) to annotate clusters. Pseudotime trajectory analysis was done using Monocle3 (v1.0.0) utilizing gene sets and starting points denoted in the text. Spatial and scRNA-seq datasets were integrated using reciprocal PCA of 3,000 reference transcripts prior to clustering.
 
-GEO Contents: Spatial transcriptomics data are available at GEO Accession GSEXXXXXX. Use the 10x Genomics bam2fastq package for manual re-alignments. Processed .h5 matricies are also deposited. The script used to generate the custom human + SARS-CoV-2 reference (GRCh38_and_NC_045512.2) is provided here.
+GEO Contents: Spatial transcriptomics data are available at GEO Accession GSE222987. Use the 10x Genomics bam2fastq package for manual re-alignments. Processed .h5 matricies are also deposited. The script used to generate the custom human + SARS-CoV-2 reference (GRCh38_and_NC_045512.2) is provided here.
 
 SampleIDs: Case-matched metadata are available with in the Supplementary Information. S01 chorionic villi, S03 decidua, and S04 chorioamniotic membrane roll samples are from the same uninfected placenta. S24, S25, and S26 are uninfected controls. S15, S17, S18, and S19 are from maternal asymptomatic (no COVID-19 symptoms) SARS-CoV-2 positive placentae and S16, S20, S21, S22, and S23 are from symptomatic maternal COVID-19 placentae. S23 was sampled twice (S23a and S23b).
 
 # Repository contents
-A) Images necessary for alignment of spatial transcriptomes. Higher-resolution (~100MB per tiff) are availible upon request.
+A) Images necessary for alignment of spatial transcriptomes. Higher-resolution images are availible from GEO GSE222987.
 
 B) Bash scripts for creating a custom reference transcriptome and alignment using Spaceranger
 
